@@ -1,0 +1,98 @@
+(1) => Book class: to represent a book,
+    everytime we create a book it's gunna istantiate a book object,
+    we use  this  class at  add a book 
+    constructor: method that run  when we instantiate a book 
+    once we get the values(form) we want ti istantiate a book from the book class 
+(2) => UI class:handle UI tasks ,
+    when we rmove  display a book in the list we show an alert 
+    I don't want to have to istantiate the UI class (we will not create object of  this class) so we're gunna make all the method static
+    we want to pull our books from local storage 
+(3) => Store class: which takes care of storage ,for storing in localstorage, we want to create 3 methods ,we wanna call them directly withowt having to istantiate the store class 
+(4) =>we're gunna have events: display,add,remove a book (that's both in the UI and storage (local storage ))
+(5) => delete :we need to use something called event propagation where we select something above it like the book list and then  we target whatever is clicked inside of it and the we deal with it 
+
+(6) => validation: go into where we add  a  book , in submiting form  event 
+	check for all fields,if title equal nothing or author 
+	we're gunna show an alert 
+	instead of alert message we wanna use BS alert danger class So create showAlert method
+
+
+
+
+let's add book,it's get added, If I reload it's gunna go away because we haven't persisted it to local storage
+our Books: it's not getting persisted to anywhare So now we're gunna deal with the storage 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.js"
+        integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    
+https://cdnjs.com/libraries/font-awesome 
+
+
+
+
+    <div class="container mt-4">
+        <h1 class="display-4">
+            <i class="fas fa-book-open text-primary"></i> My
+            <span class="text-primary">Book</span> List
+        </h1>
+        <form id="book-form">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="isdn">ISBN#</label>
+                <input type="text" id="isdn" class="form-control">
+            </div>
+            <input type="text" value="Add Book" class="btn btn-primary btn-block ">
+        </form>
+
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN#</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+        </table>
+    </div>

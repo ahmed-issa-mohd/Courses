@@ -1,0 +1,70 @@
+(1)=> we're gonna be using html5 ls to store our data, even we colse the browser they're still gonna be there (asString) 
+
+(2)=> we wanna submit our bookmark objects to ls we're gonna Save  it asArray of object  
+
+(3)=> ls Stores strings onlay, so we can  parse the Json into Straing JSON.stringify(bookmarks) Save it,when wanna to  get it back we can parse it back to  json JSON.parse(localStorage.getItem('bookmarks'))
+
+(4)=> if it  is there bookmark object in ls : we've to  fetch it add  to  it and then save  it again 
+
+(5)=> if  it is  null : we  need to  create an  array(local array)  called bookmarks :create  it  push to it set it to ls 
+
+(6)=>  bookmarksResults : that's where we wanna put them after we fetch  them  through javascript 
+
+(7)=> loop throgh the bookmarks that are in  ls and output them  one  by  one inside of a div 
+
+
+
+
+
+
+
+delete : create a function  and  pass in url  from ls,to  delete what  we wanna do  ?  is first  fetch the bookmarks from  locastorage and then  we wanna loop  through them and then check   to  see if the current one we're looping through matches this url (we passed in ), if it does we're gonna splice it out and then we're gonna reset local storage 
+
+we wanna splice at  the current iteration 
+
+
+
+
+
+let bookmarks = [];
+
+if (localStorage.getItem('bookmarks') === null) {
+    fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json())
+        .then(data => {
+            data.forEach(element => {
+                bookmarks.push(element);
+            });
+            // bookmarks.push(bookmark);
+            localStorage.setItem('bookmarks', JSON.stringify(bookmarks))
+            fetchBookmarks()
+
+        })
+}
+document.getElementById('myForm').addEventListener('submit', saveBookmark);
+
+function saveBookmark(e) {
+    let siteName = document.getElementById('siteName').value;
+    let siteUrl = document.getElementById('siteUrl').value;
+    let bookmark = {
+        name: siteName,
+        url: siteUrl
+    }
+    let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+    bookmarks.push(bookmark);
+    localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+    fetchBookmarks();
+    e.preventDefault();
+}
+
+function fetchBookmarks() {
+    let bookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+    let bookmarksResults = document.getElementById("bookmarksResults");
+
+    bookmarksResults.innerHTML = "";
+
+    bookmarks.forEach(book => {
+        bookmarksResults.innerHTML += `
+        <div>${book.name} </div>`;
+    });
+
+}

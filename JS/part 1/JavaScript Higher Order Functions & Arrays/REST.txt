@@ -1,0 +1,58 @@
+we have two arrays
+companies : it has a bunch of objects 
+ages : it has a simple numbers array 
+
+do a standard for loop 
+create variable called i ,we want to increment by one throgh each iteration 
+
+ages[i] : current iteration , in each iteration we can access the current age(element)
+
+
+
+_____________________________________
+forEach 
+
+
+forEach  is an  easier way  to loop through an array rather than using foor loop
+
+it takes in a sync callback function so this takes in three things :
+
+iterator :we can use that for each company(elelment) or whatever is in
+forEach(function(iterator,index,companies)) 
+the array 
+index 
+companies : entire array 
+
+_____________________________________
+
+filter  : to filter things  out (we wanna filter some elements we don't wanna get) from the  array , we're not creating a new one  like map 
+
+we want to  all of the ages that are 21and over 
+ Filter retail companies 
+
+Get 80s companies  comapanies.filter(comapny => (company.start >= 1979 && comapny.s))
+
+Get companies that lasted 10 years or more 
+
+_____________________________________
+
+map : instedad of filtering things out we can create a new array of anything from the current array 
+
+create array of company names    
+with each element in the array we can do  any thing  
+
+
+_____________________________________
+
+
+sort 
+we pass in two values: it takes two compnies and it'll compare them and then we return 1,-1 to move it up and down in the array 
+each iteration will take to companies and compare them 
+
+sort companies  by the start  year from earliest year to  the latest 
+sort ages  from lowest to highest 
+_____________________________________
+
+reduce 
+add all of the ages togther 
+total years for all companies 

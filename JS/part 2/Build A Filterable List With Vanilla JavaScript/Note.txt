@@ -1,0 +1,18 @@
+(1)=> we're gonna be building a filterable list using plain JavaScript.
+(2)=> we're also gonna use materalized CSS as the front-end UI.
+
+
+
+
+
+(1)=> I have an input, If I start to type If I put a B, it'll filter out everything that doesn't have a B
+(2)=> If I put an R it's gonna filter out to Brad because that's the only name that has a B and R in it
+(3)=> If I type more brfrr it doesn't match anything
+
+
+
+when we type we want to match what's being typed  in and we have to make sure that  it's upperCase 
+
+
+
+

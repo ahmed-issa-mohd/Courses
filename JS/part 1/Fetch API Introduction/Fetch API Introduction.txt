@@ -1,0 +1,14 @@
+we want to  fetch  a text file (data:text)
+we want to  fetch  a json file (data:json)
+
+fetch data from an outside API (data:json)
+
+e.preventDefault to stop it from actually submiting to  a file
+
+stringify we wanna conver js to string before we send it 
+
+make post request using fetch
+
+to make put or delete request use some different public API or create your own
+
+the response it gives you the actual post that you're  adding

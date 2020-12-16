@@ -1,0 +1,33 @@
+fetch posts Array  from a server and tht could take a couple second...  	
+
+setTimeout it takes in a callback function and it takes in a certain amount of time  where you want to delay whatever you put in here (1000)
+
+we're iterating through posts Array
+
+right after the foreach  we want to insert it into the body 
+
+the get post happened in one second (our server returned it in 1 second)
+the create post took two seconds
+by the time we ran this create post , the dom was already painted 
+this is where Asynchronous programming comes in , callback come in which is one way to handle it 
+
+
+
+
+promises
+
+for create posts we wanna instead of passing in a callback ,we don't want to run the callback 
+instead we want to return a promise 
+
+when  you  want to  resolve a promise successfully  you call resolve 
+
+Async Await it's a way to handle  responses it's not like a different way to write them or anything , we need to have a function that's labeled asynchronous 
+
+
+Async / Await  
+
+create a function  
+this function has to  be labeled  if you wanna use await inside of it 
+await  : it waits for an a synchronous process or action to complete 
+we will create post  ,we want to call right before it await 
+so  we're waiting for this to be done  until we move on to  call getPosts 

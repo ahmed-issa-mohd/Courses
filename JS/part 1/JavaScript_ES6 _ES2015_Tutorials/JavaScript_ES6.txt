@@ -1,0 +1,113 @@
+1-Transpilers can be used to compile ES6 code to ES5
+Babel
+Traceur
+Closure
+
+Let 
+when we use  var it sets the variable  in a global scope  and then you put it inside of a loop or a function it's gonna still be that local variable 
+so let gives us block scope local variable 
+we can limit the scope to whatever 
+with let we have block level scops
+if we declare a variable in the global scope 
+and then we redeclare that smae variable in a  loop or if statement  it's gonna be different 
+
+cnstant : is for cnstants that don't change
+
+Destructuring Assigment
+helps us extract data from  array and object into distinct variables
+
+ const list ={
+   name:"Shopping List " ,
+   items:["Milk","Cow"]
+};
+
+const {name,items}=list ; 
+_______________________________________
+
+Babel
+JS compiler or transpiler 
+compile es6 code  into es5 
+
+go to bable cli
+1 - npm init
+2-npm install babel-cli babel-preset-es2015 --save-dev
+3-create .babelrc  file : that's where we can specify the preset  
+{
+"preset" : [
+	"es2015" 
+]
+}
+
+4-create folder called src > main.js to write es6 code 
+5-create any flolder like dist : this is where the actual app will be along with the compiled es5 code
+
+in json file 
+
+
+{
+"scripts":{
+"build" : " babel src -d dist "
+},
+
+
+"scripts":{
+"build" : " babel --presets es2015 src -d dist "
+}
+
+
+
+},
+
+
+Npm run build 
+_______________________________________
+
+
+JavaScript ES6 / ES2015 - [04] Classes and Inheritance
+
+
+constructors are methods that will run  when your class is instantiated
+
+static method :  we don't have instantiate  object to do it 
+
+iinhert 
+to use  smae props and method for parent 
+super method : when  we extends parent class we need to  set  up its properties 
+_______________________________________
+
+avaScript ES6 / ES2015 - [05] Template Literals
+
+
+cancatenating string to variables 
+_______________________________________
+JavaScript ES6 / ES2015 - [07] Default Params & Spread Operator
+
+
+spread operator : is represented as three dots it used to  allow expression to be expanded  in places where  multiple arguments expected 
+pass args to test using applay method  , in es6 test(...args)
+_______________________________________
+
+JavaScript ES6 / ES2015 - [09] Arrow Functions
+
+shorter syntax 
+allow you to bind this lexically 
+
+ we don't have to use that in function we add to costructer function to access its properties 
+
+_______________________________________
+avaScript ES6 / ES2015 - [10] Promises
+
+promise object is used for deferred and asynchronous computations
+it represents an operation that hasn't completed yet  but expected in the future 
+
+when  we want to  display  the data on the web page  , use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object
+
+
+
+
+for of loop to iterate (�����) through the elements 
+
+
+
+
+
