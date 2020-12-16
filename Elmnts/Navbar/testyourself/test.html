@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-brand">ahmed</div>
+        <button class="toggler"> toggle</button>
+        <div class="navbar-collapsed collapse">
+            <ul class="navbar-nav">
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            var toggler = document.querySelector('.toggler'),
+                navbarcollapsed = document.querySelector('.navbar-collapsed');
+            toggler.addEventListener('click', function (e) {
+                navbarcollapsed.classList.toggle('show');
+            });
+        })();
+
+    </script>
+</body>
+
+</html>

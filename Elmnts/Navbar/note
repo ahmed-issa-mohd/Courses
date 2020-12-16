@@ -1,0 +1,54 @@
+1-navbar navbar-expand-lg navbar-light bg-light
+
+2-navbar-brand
+3-navbar-toggler    navbar-toggler-icon
+4-collapse navbar-collapse
+5-navbar-nav
+6-nav-item  active  sr-only
+7-nav-link
+
+
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+ 
+} 
+.navbar-expand-lg {
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+  }
+  
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 1;
+  align-items: center;
+}
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg {
+    flex-wrap: row nowrap;
+    justify-content: flex-start;
+  }
+  .navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  } 
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+  }
+}

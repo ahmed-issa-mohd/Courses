@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist/hc-offcanvas-nav.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="../dist/hc-offcanvas-nav.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+            $('#main-nav').hcOffcanvasNav({
+                pushContent: $("#ahmed"),
+                levelOpen: "expand"
+
+
+            });
+
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li>
+                        <a href="#">Hosting</a>
+                        <ul>
+                            <li><a href="#">Private Server</a></li>
+                            <li><a href="#">Managed Hosting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Domains</a></li>
+                    <li><a href="#">Websites</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+
+    </nav>
+    <br>
+    <div id="ahmed">
+        <h1>ahmed Issa Mohd!</h1>
+    </div>
+
+</body>
+
+</html>
